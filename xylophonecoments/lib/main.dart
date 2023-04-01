@@ -42,10 +42,6 @@ class MyXylophoneApp extends StatelessWidget {
             Create_Button(1,"First","XyloApp",Colors.green),
             Create_Button(2,"Second","XyloApp",Colors.yellow),
             Create_Button(3,"Second","XyloApp",Colors.blue),
-            Create_Button(4,"Second","XyloApp",Colors.black),
-            Create_Button(5,"Second","XyloApp",Colors.purple),
-            Create_Button(6,"Second","XyloApp",Colors.pink),
-            Create_Button(7,"Second","XyloApp",Colors.red),
           ],),
       ),
     );
