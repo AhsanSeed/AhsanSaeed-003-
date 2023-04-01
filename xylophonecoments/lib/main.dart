@@ -1,49 +1,64 @@
 import 'package:flutter/material.dart';
-//import 'package:audioplayers/audioplayers.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
-//import 'package:audioplayer/audioplayer.dart';
+
 void main() {
-  runApp(MyXylophoneApp());
+  runApp(MyApp());
 }
 
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-//CTRL + ALt + L
-class MyXylophoneApp extends StatelessWidget {
-  void myFunction(int num, String name){
-    final player = AssetsAudioPlayer();
-    player.open(
-      Audio("assets/note$num.wav"),
-    );
-    print(name);
-  }
-
-  Expanded Create_Button(int number,String name,String buttonText,Color colur){
-    return Expanded(child: ElevatedButton(
-      onPressed: (){
-        myFunction(number,name);
-      },
-      child: Text(buttonText),
-      style: ElevatedButton.styleFrom(
-        primary: colur, // This is what you need!
-      ),
-    ),);
-  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("My Xylophone App"),
-          centerTitle: true,
+          title: Text("XyloPhone"),
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Create_Button(1,"First","XyloApp",Colors.green),
-            Create_Button(2,"Second","XyloApp",Colors.yellow),
-            Create_Button(3,"Second","XyloApp",Colors.blue),
-          ],),
+        body: Xylo(),
       ),
+    );
+  }
+}
+
+class Xylo extends StatefulWidget {
+  const Xylo({Key? key}) : super(key: key);
+
+  @override
+  State<Xylo> createState() => _XyloState();
+}
+
+class _XyloState extends State<Xylo> {
+  void PlaySound(int num){
+    AssetsAudioPlayer.newPlayer().open(
+      Audio("assets/note$num.wav"),
+    );
+  }
+
+  Expanded CreateNewButton(int sound, Color colur){
+    return Expanded(
+      child: Container(
+        color: colur,
+        child: TextButton(
+            onPressed: () {
+              PlaySound(sound);
+            },
+            child: Text("Button 01")),
+      ),
+    );
+  }
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+
+        CreateNewButton(1,Colors.black26),
+        CreateNewButton(2,Colors.black12),
+        CreateNewButton(3,Colors.black26),
+      ],
     );
   }
 }
