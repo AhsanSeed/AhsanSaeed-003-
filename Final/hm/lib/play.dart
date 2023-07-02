@@ -53,55 +53,47 @@ class _PlayState extends State<Play> {
           ),
         ],
       ),
-      body: Stack(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('images/dd.png'),
-                fit: BoxFit.cover,
-              ),
+      body: SingleChildScrollView( // Added SingleChildScrollView to enable scrolling
+        child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('images/dd.png'),
+              fit: BoxFit.cover,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.4,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      SizedBox(
-                        width: (game.wrongLettersGuessed.length == 6)
-                            ? ((MediaQuery.of(context).size.width / 2) - 84.5)
-                            : ((MediaQuery.of(context).size.width / 2) - 78),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.asset(
-                          'images/hangman' +
-                              game.wrongLettersGuessed.length.toString() +
-                              '.png',
-                          height: 120,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Text(
-                    isLowerCase ? game.displayWord.toLowerCase() : game.displayWord.toUpperCase(),
-                    style: TextStyle(fontSize: 48),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 64.0),
-                    child: _getKeyPad(),
+                  Image.asset(
+                    'images/hangman' +
+                        game.wrongLettersGuessed.length.toString() +
+                        '.png',
+                    height: 120,
                   ),
                 ],
               ),
-            ),
+              SizedBox(
+                height: 16.0,
+              ),
+              Text(
+                isLowerCase ? game.displayWord.toLowerCase() : game.displayWord.toUpperCase(),
+                style: TextStyle(fontSize: 48),
+              ),
+              SizedBox(
+                height: 64.0,
+              ),
+              _getKeyPad(),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
@@ -119,14 +111,14 @@ class _PlayState extends State<Play> {
     return Column(
       children: <Widget>[
         _getRow(0, letters),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: _getRow(1, letters),
+        SizedBox(
+          height: 16.0,
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 49.0),
-          child: _getRow(2, letters),
+        _getRow(1, letters),
+        SizedBox(
+          height: 16.0,
         ),
+        _getRow(2, letters),
       ],
     );
   }
@@ -137,6 +129,7 @@ class _PlayState extends State<Play> {
       row.add(_getLetterButton(letters[rowIndex][i]));
     }
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: row,
     );
   }
@@ -148,17 +141,18 @@ class _PlayState extends State<Play> {
         builder: (BuildContext context) {
           return GestureDetector(
             child: Container(
-              width: MediaQuery.of(context).size.width / 12.5,
-              height: 30,
+              width: 50,
+              height: 50,
               alignment: Alignment.center,
               child: Text(
                 letter,
                 style: TextStyle(
                   color: _getLetterColor(letter),
+                  fontSize: 24,
                 ),
               ),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(6)),
+                shape: BoxShape.circle,
                 color: Colors.brown,
               ),
             ),
@@ -297,7 +291,15 @@ class _PlayState extends State<Play> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text("Words with Length $length"),
-          content: Text(wordList),
+          content: SingleChildScrollView(
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              child: Text(
+                wordList,
+                textAlign: TextAlign.left,
+              ),
+            ),
+          ),
           actions: [
             ElevatedButton(
               onPressed: () {
