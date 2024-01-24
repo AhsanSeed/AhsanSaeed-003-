@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/rounded_bottom_sheet"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:behavior_hideable="true"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_view_bg"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_password"
+                android:gravity="start"
+                android:textSize="32sp"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_password_details"
+                android:textSize="14sp"
+                android:textAlignment="textStart"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textSize="14sp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                />
+
+            <EditText
+                android:id="@+id/edtForgotPassEmail"
+                style="@style/EditTextStyle"
+                android:layout_marginTop="5dp"
+                android:autofillHints="emailAddress"
+                android:hint="@string/abc_123_gmail_com"
+                android:inputType="textEmailAddress"
+                tools:ignore="LabelFor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/remember_password"
+                    android:textSize="13sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvRememberLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/log_in"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp"
+                    android:layout_marginStart="4dp"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnForgotPassSubmit"
+                style="@style/FilledButtonStyle"
+                android:layout_marginBottom="25dp"
+                android:text="@string/submit" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>

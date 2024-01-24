@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ApplyForConnectionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/new_gas_connection"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name_of_applicant"
+            android:textSize="14sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtName"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|textCapWords"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cnic_no"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtCNIC"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="number"
+            android:inputType="number"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cnic_issue_date"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtCNICIssueDate"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="date"
+            android:inputType="date"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mobile_no"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtMobileNo"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="phone"
+            android:inputType="phone"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/s_o_d_o_w_o"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtSDWOf"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|textCapWords"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/email"-->
+<!--            android:textSize="14sp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginLeft="25dp"-->
+<!--            android:layout_marginRight="25dp"-->
+<!--            />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/edtEmail"-->
+<!--            style="@style/EditTextStyle"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:autofillHints="emailAddress"-->
+<!--            android:inputType="textEmailAddress"-->
+<!--            android:ems="10"-->
+<!--            tools:ignore="LabelFor" />-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address_where_gas_connection_is_required"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtAddressLine"
+            android:layout_height="120dp"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|textCapWords"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/province"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtProvince"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|textCapWords"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/city"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtCity"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|textCapWords"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nearest_place_land_mark"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtNearestPlace"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|textCapWords"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nearest_consumer_no"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtNearestConsumerNo"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|number"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/type_of_premises_house_flat"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtTypeOfPremises"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|textCapWords"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Area of Premises (10 Marla/Above 10 Marla)"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtAreaOfPremises"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|number"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cnic_front"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ivCNICFrontImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="@string/todo"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/cnic_front_side" />
+
+                    <ImageView
+                        android:id="@+id/ivSelectFrontImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_camera" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cnic_back"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ivCNICBackImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="@string/todo"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/cnic_back_side" />
+
+                    <ImageView
+                        android:id="@+id/ivSelectBackImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_camera" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/property_document"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+
+                <ImageView
+                    android:id="@+id/ivPDImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/todo"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/default_property_image" />
+
+                <ImageView
+                    android:id="@+id/ivSelectPDImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_camera" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="25dp"
+            android:text="@string/sngpl_gas_pipeline_network_exists_in_front_of_my_premises_which_is_fully_constructed_and_occupied"/>
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="25dp"
+            android:text="@string/i_fully_understand_that_if_the_information_given_above_is_found_contrary_to_the_facts_sngpl_is_fully_authorized_to_treat_my_application_as_invalid_for_any_further_consideration"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/FilledButtonStyle"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:text="Submit" />
+
+    </LinearLayout>
+
+</ScrollView>

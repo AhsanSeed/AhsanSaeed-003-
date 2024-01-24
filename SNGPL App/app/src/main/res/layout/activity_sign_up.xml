@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBackArrow"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            android:backgroundTint="@color/back_arrow_color"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="25dp"
+            android:layout_gravity="start">
+
+            <ImageView
+                android:id="@+id/ivBackArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/todo"
+                android:scaleType="center"
+                android:src="@drawable/ic_arrow_back" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registeration"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="32sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textSize="14sp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtUsername"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:inputType="textPersonName|textCapWords"
+            android:autofillHints="textPersonName"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtEmail"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:inputType="textEmailAddress"
+            android:autofillHints="textEmailAddress"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/phone_number"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtPhone"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:inputType="phone"
+            android:autofillHints="phone"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cnic"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtCNIC"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:inputType="number"
+            android:autofillHints="number"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cnic_issue_date_req"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtCNICIssueDate"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:inputType="date"
+            android:autofillHints="date"
+            android:ems="10"
+            android:editable="false"
+            android:clickable="true"
+            tools:ignore="LabelFor"
+            android:focusable="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:inputType="textPassword"
+            android:autofillHints="textPassword"
+            tools:ignore="LabelFor" />
+
+        <Button
+            android:id="@+id/btnCreateAccount"
+            android:text="@string/sign_up"
+            android:layout_marginTop="40dp"
+            style="@style/FilledButtonStyle"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"
+            android:gravity="center">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@color/border_color"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/or"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@color/border_color"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/already_have_account"
+                android:textSize="13sp"
+                />
+
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/log_in"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

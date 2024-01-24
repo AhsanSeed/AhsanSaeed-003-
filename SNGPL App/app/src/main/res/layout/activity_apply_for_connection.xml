@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ApplyForConnectionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/apply_for_gas_connection"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name_of_applicant"
+            android:textSize="14sp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtName"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|textCapWords"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/s_o_d_o_w_o"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPassword"
+            android:inputType="textPassword"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cnic_no"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtCNIC"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="number"
+            android:inputType="number"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cnic_issue_date"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtCNICIssueDate"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="date"
+            android:inputType="date"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/telephone_no_res"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtTeleNoRes"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="phone"
+            android:inputType="phone"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/telephone_no_off"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtTeleNoOff"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="phone"
+            android:inputType="phone"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mobile_no"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtMobileNo"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="phone"
+            android:inputType="phone"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtEmail"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="emailAddress"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/border_color"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address_where_gas_connection_is_required"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/border_color"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address_line"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtAddressLine"
+            android:layout_height="120dp"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|textCapWords"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nearest_place_land_mark"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtNearestPlace"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|textCapWords"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nearest_consumer_no"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtNearestConsumerNo"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|number"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/province"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtProvince"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|textCapWords"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/district"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtDistrict"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|textCapWords"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/city"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtCity"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|textCapWords"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/border_color"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/constituency_details"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/border_color"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/na"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtNA"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|textCapWords"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pp"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtPP"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|textCapWords"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/border_color"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/natural_gas_required_for"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/border_color"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/cbKitchen"
+                    android:text="@string/kitchen"
+                    android:ems="10"
+                    tools:ignore="LabelFor" />
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/cbWaterHeating"
+                    android:text="@string/water_heating"
+                    android:ems="10"
+                    tools:ignore="LabelFor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/cbSpaceHeating"
+                    android:text="@string/space_heating"
+                    android:ems="10"
+                    tools:ignore="LabelFor" />
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/cbAllOfThese"
+                    android:text="@string/all_of_the_three"
+                    android:ems="10"
+                    tools:ignore="LabelFor" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/border_color"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/in_case_the_premises_is_not_owned_by_the_applicant"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/border_color"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name_of_owner"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtOwnerName"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="textPersonName"
+            android:inputType="textPersonName|textCapWords"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cnic_no"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edtCNICNo"
+            style="@style/EditTextStyle"
+            android:layout_marginTop="5dp"
+            android:autofillHints="number"
+            android:inputType="number"
+            android:ems="10"
+            tools:ignore="LabelFor" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/border_color"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_cnic_property_ownership_documents_to_upload"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/border_color"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cnic_front"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ivProductImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="@string/todo"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/pizza_image" />
+
+                    <ImageView
+                        android:id="@+id/ivSelectImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_camera" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cnic_back"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="@string/todo"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/pizza_image" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_camera" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ownership_document"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/todo"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/pizza_image" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_camera" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/FilledButtonStyle"
+            android:layout_marginTop="25dp"
+            android:text="@string/log_in" />
+
+    </LinearLayout>
+
+</ScrollView>

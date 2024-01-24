@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "626160566758",
+    "project_id": "gas-connection-app",
+    "storage_bucket": "gas-connection-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626160566758:android:5901ec9e58b2ff25a49627",
+        "android_client_info": {
+          "package_name": "com.cuivehari.gasconnectionapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "626160566758-i5ifsdfh2p6tvcl5ltfo5sk20s1elttj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_QWDzkyHMv7SWem79M_MnJpaTiluA-gA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "626160566758-i5ifsdfh2p6tvcl5ltfo5sk20s1elttj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

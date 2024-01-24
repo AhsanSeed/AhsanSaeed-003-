@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.jrvansuita:PickImage:3.0.01@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/35ce0a3cf4ff9ed90446436e306d7357/transformed/PickImage-3.0.01/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/35ce0a3cf4ff9ed90446436e306d7357/transformed/PickImage-3.0.01/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/35ce0a3cf4ff9ed90446436e306d7357/transformed/PickImage-3.0.01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/35ce0a3cf4ff9ed90446436e306d7357/transformed/PickImage-3.0.01/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jrvansuita/PickImage/3.0.01/2d9657e5ddbb5c9bc39491039de23e389d91542f/PickImage-3.0.01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
