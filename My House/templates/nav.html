@@ -1,0 +1,27 @@
+<div class="sidenav-item make-me-sticky">
+  <a class="btn btn-lightweight no-outline navigation-btn"
+    >Feature Categories</a
+  >
+  <nav
+    role="navigation"
+    id="sidenav"
+    class="nav side-navigation side-navigation-large theme-default"
+  >
+    <div class="navigation-label">Feature Categories</div>
+    <button
+      type="button"
+      class="close"
+      data-dismiss="side-navigation"
+      aria-label="close"
+    >
+      <i class="glyph glyph-cancel"></i>
+    </button>
+    <ul>
+      {% for key in feature_form_structure %}
+
+      <li><a class="nav-item-1" href="#{{ key }}_id">{{ key }}</a></li>
+
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

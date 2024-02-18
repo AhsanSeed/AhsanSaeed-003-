@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/reset.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/winstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/winstrap-optional.min.css') }}"
+    />
+    <title>House Price Predictions</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5">{% include 'nav.html' %}</div>
+        <div class="col-md-19">
+          <div class="content">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col">
+                  <div class="jumbotron theme-light">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-16">
+                          <div class="type-h2">House Price Predictor</div>
+                          <p>
+                            Choose the various features and customize them to
+                            suit your needs. There are serveral features you can
+                            customize. Good luck!
+                          </p>
+                          <div class="btn-group">
+                            <button class="btn btn-primary" href="#">
+                              Start
+                            </button>
+                            <button class="btn btn-secondary" href="#">
+                              Read more
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container-fluid second">
+                <div class="row">
+                  <div class="col-md-24">{% include 'form.html' %}</div>                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/vendor/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/app.js') }}"></script>
+  </body>
+</html>

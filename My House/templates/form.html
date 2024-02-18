@@ -1,0 +1,143 @@
+<form>
+
+{% for key in feature_form_structure %}
+
+    <div id="{{ key }}_id" class="type-h3">{{ key }}</div>
+
+    {% for feature in feature_form_structure[key] %}
+
+    <div class="form-group">
+        
+        <label for="{{ feature['Label'] }}">{{ feature['Data']['Description'] }}</label>
+
+        {% if feature['Data']['Form'] is mapping %}
+
+            <div class="container-fuild">
+
+                <div class="row">
+            
+                    <div class="col-md-24">
+            
+                        <div class="container-fuild">
+            
+                            <div class="row">
+            
+                                <div class="col-md-9">
+            
+                                    <div class="combobox">
+
+                                        <select id="{{ feature['Label'] }}" class="form-control">
+
+                                            {% set first = True %}
+
+                                            {% for option_key in feature['Data']['Form'] %}
+
+                                                {% if first %}
+                                                
+                                                    <option selected value="{{ option_key }}">
+                                                        
+                                                        {{ feature['Data']['Form'][option_key] }}
+                                                    
+                                                    </option>
+
+                                                {% else %}
+
+                                                    <option value="{{ option_key }}">
+                                                        
+                                                        {{ feature['Data']['Form'][option_key] }}
+                                                    
+                                                    </option>
+
+                                                {% endif%}
+
+                                                {% set first = False %}
+                                                
+                                            {% endfor %}
+
+                                        </select>
+
+                                    </div>
+            
+                                </div>
+            
+                            </div>
+            
+                        </div>
+            
+                    </div>
+            
+                </div>
+        
+            </div>
+
+        {% elif feature['Data']['Form'] == 'int64' %}
+
+            <div class="container-fuild">
+
+                <div class="row">
+
+                    <div class="col-md-5">
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="{{ feature['Label'] }}"
+                            placeholder="1999"
+                            value="1999"
+                        />
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+
+        {% else %}
+
+            <div class="container-fuild">
+
+                <div class="row">
+
+                    <div class="col-md-5">
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="{{ feature['Label'] }}"
+                            value="200.00"
+                            placeholder="200.00"
+                        />
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+  
+        {% endif %}
+
+    </div>
+
+    {% endfor %}
+
+{% endfor %}
+
+    <div class="form-group">
+        <div id="results"></div>    
+    </div>
+
+    <div class="form-group">
+        <div class="btn-group">
+        <a class="btn btn-primary" onclick="predictPrice()"
+            >Predict Price</a
+        >
+        <a
+            class="btn btn-default"
+            onclick="clear_results()"
+            >Clear</a
+        >
+        </div>
+    </div>
+
+</form>
