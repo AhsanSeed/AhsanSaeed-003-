@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New House Registration</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  input[type="checkbox"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  input[type="checkbox"] {
+    display: inline;
+    width: auto;
+    margin-right: 5px;
+  }
+
+  label[for="terms"] {
+    display: inline;
+    margin-left: 5px;
+  }
+
+</style>
+</head>
+<body>
+
+<h2>Register for Your New House</h2>
+
+<form action="submit.php" method="post">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br>
+
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+
+  <label for="phone">Phone:</label><br>
+  <input type="tel" id="phone" name="phone" required><br>
+
+  <label for="house-type">House Type:</label><br>
+  <select id="house-type" name="house-type" required>
+    <option value="">Select house type</option>
+    <option value="apartment">Apartment</option>
+    <option value="villa">Villa</option>
+    <option value="townhouse">Townhouse</option>
+  </select><br>
+
+  <input type="checkbox" id="terms" name="terms" required>
+  <label for="terms">I agree to the terms and conditions</label><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

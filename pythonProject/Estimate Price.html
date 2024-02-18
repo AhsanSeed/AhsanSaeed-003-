@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My New Housing</title>
+<style>
+    body {
+        background-color: lightgray;
+    }
+    .container {
+        width: 800px;
+        margin: 0 auto;
+    }
+    label {
+        display: inline-block;
+        width: 120px;
+        margin-bottom: 5px;
+    }
+    input[type="text"] {
+        width: 200px;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1> My New Housing</h1>
+    <form id="housingForm">
+        <div>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location">
+        </div>
+        <div>
+            <label for="area">Area:</label>
+            <input type="text" id="area" name="area">
+        </div>
+        <div>
+            <label for="bathrooms">Bathrooms:</label>
+            <input type="text" id="bathrooms" name="bathrooms">
+        </div>
+        <div>
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price">
+        </div>
+        <div>
+            <button type="button" onclick="Estimate()">Add</button>
+        </div>
+    </form>
+
+    <table id="houseList">
+        <thead>
+            <tr>
+                <th>Location</th>
+                <th>House Number</th>
+                <th>Area</th>
+                <th>Bathrooms</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script>
+    function addHouse() {
+        var location = document.getElementById("location").value;
+        var area = document.getElementById("area").value;
+        var bathrooms = document.getElementById("bathrooms").value;
+        var price = document.getElementById("price").value;
+
+        // Add validation if needed
+
+        // Code for adding house to the backend/database
+        // Example AJAX call or form submission
+        // After successful addition, update the house list table
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        viewHouses();
+    });
+</script>
+</body>
+</html>

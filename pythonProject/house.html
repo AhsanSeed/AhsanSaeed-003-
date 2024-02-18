@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My New Housing</title>
+<style>
+    body {
+        background-color: lightgray;
+    }
+    .container {
+        width: 800px;
+        margin: 0 auto;
+    }
+    label {
+        display: inline-block;
+        width: 100px;
+        margin-bottom: 5px;
+    }
+    input[type="text"] {
+        width: 200px;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>My New Housing</h1>
+    <form id="realEstateForm">
+        <div>
+            <label for="plotNumber">Plot number:</label>
+            <input type="text" id="plotNumber" name="plotNumber">
+        </div>
+        <div>
+            <label for="ownerName">Owner Name:</label>
+            <input type="text" id="ownerName" name="ownerName">
+        </div>
+        <div>
+            <label for="size">Size:</label>
+            <input type="text" id="size" name="size">
+        </div>
+        <div>
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price">
+        </div>
+        <div>
+            <button type="button" onclick="addPlot()">Add</button>
+            <button type="button" onclick="updatePlot()">Update</button>
+            <button type="button" onclick="deletePlot()">Delete</button>
+            <button type="button" onclick="searchPlot()">Search</button>
+        </div>
+    </form>
+
+    <table id="plotList">
+        <thead>
+            <tr>
+                <th>Plot number</th>
+                <th>Owner Name</th>
+                <th>Size</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script>
+    function addPlot() {
+        // Code for adding plot
+    }
+
+    function updatePlot() {
+        // Code for updating plot
+    }
+
+    function deletePlot() {
+        // Code for deleting plot
+    }
+
+    function searchPlot() {
+        // Code for searching plot
+    }
+
+    function getValue(event) {
+        // Code for getting values
+    }
+
+    function showPlots() {
+        // Code for showing plots
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        showPlots();
+    });
+</script>
+</body>
+</html>
