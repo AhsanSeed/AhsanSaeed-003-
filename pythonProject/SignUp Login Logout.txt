@@ -1,0 +1,44 @@
+SignUp Code
+
+SqlConnection con = new SqlConnection();
+            con.ConnectionString = @"Data Source =.; Initial Catalog = Uni; Integrated Security = True";
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "Insert into Registration Values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "','" + TextBox6.Text + "')";
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+Login Code
+
+SqlConnection con = new SqlConnection();
+            con.ConnectionString = @"Data Source =.; Initial Catalog = Uni; Integrated Security = True";
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter("Select *from Registration WHERE username='" + TextBox5.Text + "' AND password='" + TextBox6.Text + "'", con);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            if (ds.Tables[0].Rows.Count == 1)
+            {
+                Session["Name"] = ds.Tables[0].Rows[0]["Name"].ToString();
+                Response.Redirect("Welcome.aspx");
+            }
+            else
+            {
+                Response.Write("Invalid Username or Password!");
+            }
+            con.Close();
+To Avoid Unauthorized Access code:
+past the following code in Page_Load
+     
+            if (Session["Name"] != null)
+            {
+                Label1.Text = Session["Name"].ToString();
+            }
+            else
+            {
+                Response.Redirect("Login.aspx");
+            }
+      
+Logout Code:
+
+ Session["Name"] = null;
