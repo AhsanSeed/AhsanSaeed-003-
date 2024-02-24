@@ -1,0 +1,37 @@
+/* Add your CSS styles here */
+.user-info {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+label[for="upload-picture"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+label[for="upload-picture"]:hover {
+    background-color: #45a049;
+}
