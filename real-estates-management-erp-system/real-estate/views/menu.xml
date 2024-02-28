@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+        <!--==================== [advertisements] menu =============================-->
+        <menuitem name="Real Estate" id="real_estate_menu_root"/>
+        <!--===================================================================-->
+        <!--==================== [advertisements] menu =============================-->
+        <menuitem name="advertisements" id="advertisements_menu_root" parent="real_estate_menu_root"/>
+        <!--===================================================================-->
+        <!--==================== [properties] menu =============================-->
+        <menuitem name="properties" id="properties" parent="advertisements_menu_root"
+                  action="real_estate_properties_action"/>
+        <!--===================================================================-->
+        <!--==================== [Settings] menu =============================-->
+        <menuitem name="Settings" id="settings_menu_root" parent="real_estate_menu_root"/>
+        <!--===================================================================-->
+        <!--==================== [properties] menu =============================-->
+        <menuitem name="property type" id="property_type" parent="settings_menu_root"
+                  action="real_estate_property_type_action"/>
+        <menuitem name="property tags" id="property_tags" parent="settings_menu_root"
+                  action="real_estate_property_tags_action"/>
+        <menuitem name="property offers" id="property_offers" parent="settings_menu_root"
+                  action="real_estate_property_offers_action"/>
+        <!--===================================================================-->
+
+    </data>
+</odoo>

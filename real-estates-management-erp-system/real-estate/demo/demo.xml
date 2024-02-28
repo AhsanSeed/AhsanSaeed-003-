@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+
+        <!--=============================[estate.property]====================    -->
+        <record id="object_001" model="estate.property">
+            <field name="name">appartment in aswan</field>
+            <field name="expected_price">1000.0</field>
+
+        </record>
+
+        <record id="object_002" model="estate.property">
+            <field name="name">house in luxor</field>
+            <field name="expected_price">1000.0</field>
+
+        </record>
+
+        <record id="object_003" model="estate.property">
+            <field name="name">castle in cairo</field>
+            <field name="expected_price">1000.0</field>
+        </record>
+        <!--=====================================================================-->
+ <!--==============[estate.property.tags]=========================-->
+        <record id="object_1" model="estate.property.tags">
+            <field name="name">renovated</field>
+        </record>
+
+        <record id="object_2" model="estate.property.tags">
+            <field name="name">cozy</field>
+        </record>
+
+        <record id="object_3" model="estate.property.tags">
+            <field name="name">exceptional</field>
+        </record>
+        <!--=====================================================================-->
+<!--        &lt;!&ndash; ==========================[estate.property.type]=================&ndash;&gt;-->
+<!--        <record id="object_01" model="estate.property.type">-->
+<!--            <field name="name">appartment</field>-->
+<!--        </record>-->
+
+<!--        <record id="object_02" model="estate.property.type">-->
+<!--            <field name="name">house</field>-->
+<!--        </record>-->
+
+<!--        <record id="object_03" model="estate.property.type">-->
+<!--            <field name="name">castle</field>-->
+<!--        </record>-->
+
+<!--        &lt;!&ndash;=====================================================================&ndash;&gt;-->
+
+    </data>
+</odoo>

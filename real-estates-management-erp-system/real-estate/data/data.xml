@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+        <!--==============offer's sequnce =======================  -->
+        <record id="seq_estate_offer" model="ir.sequence">
+            <field name="name">offer sequence</field>
+            <field name="code">estate.offer.sequence</field>
+            <field name="prefix">HF</field>
+            <field name="padding">3</field>
+        </record>
+        <!--=========================================================-->
+    </data>
+</odoo>

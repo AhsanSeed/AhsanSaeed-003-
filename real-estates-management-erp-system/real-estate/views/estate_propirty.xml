@@ -1,0 +1,222 @@
+<odoo>
+    <data>
+        <!-- ============== tree view  ============= -->
+        <record id="real_estate_properties_tree_view" model="ir.ui.view">
+            <field name="name">real.estate.properties.tree.view</field>
+            <field name="model">estate.property</field>
+            <field name="arch" type="xml">
+                <tree string="properties" sample="1" edit="1">
+                    <field name='name'/>
+                    <field name='postcode'/>
+                    <field name="bedrooms" optional="show"/>
+                    <field name="living_area" optional="show"/>
+                    <field name="expected_price"/>
+                    <field name="selling_price" optional="hide"/>
+                    <field name="date_availability"/>
+                    <field name="active" optional="hide"/>
+                    <field name="state"/>
+                    <field name='property_type_id'/>
+                </tree>
+            </field>
+        </record>
+        <!-- ============================================================= -->
+        <!-- ============== kanban view  ================================= -->
+        <record id="real_estate_properties_kanban_view" model="ir.ui.view">
+            <field name="name">real.estate.properties.kanban.view</field>
+            <field name="model">estate.property</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="property_type_id" records_draggable="0" group_create="0">
+                    <field name="state"/>
+                    <field name="expected_price"/>
+                    <field name="best_price"/>
+                    <field name="tag_ids" string='property tags' widget="many2many_tags"
+                           options="{'color_field': 'color'}"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <h3>
+                                    <field name="name"/>
+                                </h3>
+                                <div t-if="record.state.raw_value == 'offer_accepted' | record.state.raw_value == 'accepted'">
+                                    <spam>selling price:
+                                        <field name="selling_price"/>
+                                    </spam>
+                                </div>
+                                <div t-if="record.state.raw_value == 'offer_received' |record.state.raw_value == 'offer_accepted' | record.state.raw_value == 'accepted'">
+                                    <spam>best price:
+                                        <field name="best_price"/>
+                                    </spam>
+                                </div>
+
+                        <field t-if="record.tag_ids" name="tag_ids" string='property tags' widget="many2many_tags" options="{'color_field': 'color'}"/>
+
+                            </div>
+
+                            <div t-if="record.state.raw_value == 'new'">
+                                This is new!
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+        <!-- ============================================================= -->
+        <!-- ============== [real.estate.properties.form.view ] ============= -->
+        <record id="real_estate_properties_form_view" model="ir.ui.view">
+            <field name="name">real.estate.properties.form.view</field>
+            <field name="model">estate.property</field>
+            <field name="arch" type="xml">
+                <form string="property">
+                    <header>
+                        <!-- ==============start statusbar button controller  ============= -->
+                        <button name="action_do_cancal"
+                                type="object"
+                                string="cancal"
+                                confirm="do yo sure to cancal your property ? "
+                                class="btn-danger"/>
+                        <!--________________________________________________-->
+                        <button name="action_do_sold"
+                                type="object"
+                                string="sold"
+                                class="btn-info"/>
+                        <!--________________________________________________-->
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="new,offer_received,offer_accepted,accepted"/>
+                    </header>
+                    <sheet>
+                        <widget name="web_ribbon" title="CANACLED" bg_color="bg-danger"
+                                attrs="{'invisible': [('is_cancal', '=', False)]}"/>
+                        <widget name="web_ribbon" title="SOLD" bg_color="bg-info"
+                                attrs="{'invisible': [('is_sold', '=', False)]}"/>
+                        <div class="oe_tile">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+
+                        <field name="tag_ids" string='property tags' widget="many2many_tags"
+                               options="{'color_field': 'color'}"/>
+                        <group>
+                            <group>
+                                <field name='property_type_id'/>
+                                <field name='postcode'/>
+                                <field name="date_availability"/>
+                            </group>
+                            <group>
+                                <field name="expected_price"/>
+                                <field name="selling_price"/>
+                                <field name="best_price"/>
+                                <field name="active" invisible="1"/>
+                                <field name="is_sold" invisible="1"/>
+                                <field name="is_cancal" invisible="1"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <!-- ==============[start descriptions page ] ============= -->
+                            <page name="descriptions" string="descriptions">
+                                <group>
+                                    <group>
+                                        <field name="description"/>
+                                        <field name="bedrooms"/>
+                                        <field name="living_area"/>
+                                        <field name="facades"/>
+                                        <field name="garage"/>
+                                        <field name="garden"/>
+                                        <field name="garden_area" attrs="{'invisible': [('garden', '=', False)]}"/>
+                                        <field name="garden_orientation"/>
+                                    </group>
+                                    <group>
+
+                                        <field name="total_area"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <!-- ==============[end descriptions page] ============= -->
+                            <!-- ==============[start info page ] ============= -->
+                            <page name="other info" string="other info">
+                                <group>
+                                    <field name="buyer_id"/>
+                                    <field name="sales_person_id"/>
+                                </group>
+                            </page>
+                            <!-- ==============[end info page] ============= -->
+                            <!-- ==============[start offers page ] ============= -->
+                            <page name="offers" string="offers">
+                                <field name="offer_ids">
+                                    <tree sample="1" editable="bottom" create="true" delete="true">
+                                        <field name="partner_id"/>
+                                        <field name="price"/>
+                                        <button name="action_do_accepted" string="" status="accepted" type="object"
+                                                icon="fa-check text-success"/>
+                                        <button name="action_do_refused" string="" status="refused" type="object"
+                                                icon="fa-times-circle text-danger"/>
+                                        <field name="status"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <!-- ==============[end offers page] ============= -->
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- ============================================================= -->
+        <!-- =============== [estate_porperty_search_view]==========================-->
+        <record id="estate_porperty_search_view" model="ir.ui.view">
+            <field name="name">estate.porperty.search.view</field>
+            <field name="model">estate.property</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name='name'/>
+                    <field name='postcode'/>
+                    <field name="expected_price"/>
+                    <field name="bedrooms"/>
+                    <field name="living_area"/>
+                    <field name="facades"/>
+                    <separator/>
+                    <filter string="SOLD" name="active" domain="[('active', '=', False)]"/>
+                    <filter string="Avaliable" name="state"
+                            domain="['|',('state','=',('new')),('state', '=',('offer_received'))]"/>
+                    <group string="Group By" expand="0">
+                        <filter string="POSTCode" name="group_by_postcode" context="{'group_by':'postcode'}"/>
+                    </group>
+                    <searchpanel>
+                        <field name="state" enable_counters="1" select="multi" icon="fa-users"/>
+                    </searchpanel>
+                </search>
+            </field>
+        </record>
+        <!-- ============================================================= -->
+        <!-- ============== [real estate property action] ============= -->
+        <record model="ir.actions.act_window" id="real_estate_properties_action">
+            <field name="name">properties</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">estate.property</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    create your first property !
+                </p>
+            </field>
+        </record>
+        <!--===================================================================-->
+        <!-- ============== [sales person estate property action] ============= -->
+        <!--inharted form view from selas order -->
+        <record id="inherited_res_user_model_view_form" model="ir.ui.view">
+            <field name="name">inherited.users.form.inherit.property</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='preferences']" position="after">
+                    <page name="properties" string="Real Estate properties">
+                        <field name="property_ids"/>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+        <!--===================================================================-->
+    </data>
+</odoo>
